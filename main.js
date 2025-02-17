@@ -22,6 +22,7 @@ console.log(typeof NaN)  //verifica che sia veramente numero
 console.log(0/0)  //prova per far uscire un NaN
 console.log("somma 5+7", 5+7, "ciao");
 console.log("sottrazione 5-7", 5-7);
+console.log("negativo", -7);
 console.log("prodotto 5*7", 5*7);
 console.log("divsione 5/7", 5/7);
 console.log("potenza 2**5", 5**7);
@@ -49,6 +50,95 @@ console.log(`"l'apostrofo" è importante
 console.log(` la somma di 5 e 7 è ${7+5}`);  //esempio
 
 console.log('ciao a tutti' + ' sono Mannu');
+
+
+//Boolean
+console.log("Vero", true);
+console.log("Falso", false);
+
+//not  !
+console.log("not+vero", !true);
+console.log("not+falso", !false);
+
+//and  &&
+console.log("true and true", true && true);
+console.log("true and false", true && false);
+console.log("false and true", false && true);
+console.log("false and false", false && false);
+
+//or maiusc+backslash (double pipe) ||
+
+console.log("true or true", true || true);
+console.log("true or false", true || false);
+console.log("false or true", false || true);
+console.log("false or false", false || false);
+
+//undefind null
+
+console.log(typeof undefined);  //mai definito
+console.log(typeof null);     //per forzare il fatto che sia vuoto
+
+//operatori di confronto 
+
+//uguaglianza  ==/===  mai usare il ==(vecchio metodo, esiste ma non si usa)
+//diverso !=/!==  stesso concetto (rifarti esempio, viene al contrario)
+
+console.log("5 è uguale a 5", 5==5);  //non usare
+console.log("5 è uguale a 6", 5==6);  //non usare
+console.log("5 è uguale a 5", 5===5); 
+console.log("5 è uguale a 6", 5===6); 
+console.log("la stringa 5 è uguale a 5", "5"==5);  //motivo per la quale non si usa, forza le cose
+console.log("la stringa 5 è uguale a 5", "5"===5); 
+
+//confronto </<=  >/>=
+console.log("5 è minore di 6", 5<6); 
+console.log("5 è maggiore di 6", 5>6); 
+
+console.log("a è maggiore di b", "a">"b"); 
+console.log("a è minore di b", "a"<"b"); 
+console.log("A è minore di b", "A"<"b"); //maiuscole sono maaggiori...vedi ordine di valori
+
+//Variabili var, let, const   
+
+let pippo = 5;
+console.log(pippo);
+console.log(pippo+2);
+
+pippo="stocazzo"  //let cambia ache senza rimettere let, quindi contenitore che puo cambiare valore, non tipato quindi tipo anche diverse
+console.log(pippo)
+
+const pluto = 9;
+console.log(pluto+2);
+//pluto = stocazzo   const non si puo camabiare
+//console.log(pluto)
+
+
+//NON usare MAI VAR !!!!!!!!! ma usa let
+//paperino = 10 ;
+//console.log(paperino)
+//var paperino
+
+//CamelCase
+
+const numeroDaElevareAPotenza = 9;
+const esponenteDellaPotenza = 2;
+console.log(numeroDaElevareAPotenza ** esponenteDellaPotenza);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
