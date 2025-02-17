@@ -104,6 +104,7 @@ let pippo = 5;
 console.log(pippo);
 console.log(pippo+2);
 
+
 pippo="stocazzo"  //let cambia ache senza rimettere let, quindi contenitore che puo cambiare valore, non tipato quindi tipo anche diverse
 console.log(pippo)
 
@@ -118,11 +119,38 @@ console.log(pluto+2);
 //console.log(paperino)
 //var paperino
 
-//CamelCase
+let pippo2 = 5 * 5;
+console.log (pippo2 + 5);
+//CamelCase e assegnazione
 
 const numeroDaElevareAPotenza = 9;
 const esponenteDellaPotenza = 2;
 console.log(numeroDaElevareAPotenza ** esponenteDellaPotenza);
+
+//short circuit operator 
+
+const qui = 5 || 6;  //operatore logico nella variabili, da spiegare meglio nel futuro
+console.log(qui);
+//const qui2 = false || 6;  
+//console.log(qui2); 
+
+const qua = 5 ?? 6;  
+console.log(qua); 
+const qua2 = false ?? 6;   //si rompe solo se il primo è undefinied o nan il ?? controlla solo se è vuoto
+console.log(qua2); 
+
+const quo = (5 > 4) ? 10 : 20 ;    //operatore ternario se vero inserisce primo dei due successivi valori
+console.log(quo); 
+const quo2 = (5 < 4) ? 10 : 20 ;    //operatore ternario se falso inserisce secondo dei due successivi valori
+console.log(quo2); 
+
+
+
+
+
+
+
+
 
 
 
