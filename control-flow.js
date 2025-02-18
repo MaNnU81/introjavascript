@@ -74,13 +74,97 @@
 // i++;
 // }
 
-const secretNumber = Math.round(Math.random() *10)
-while (true) {
-   const guessedString = prompt ("indovina il numero che sto pensando...(da unoa dieci")
-   const guessedNumber = parseInt (guessedString)
-   if (guessedNumber===6) {
-    alert("bravo, sei un campione!!");
-    break;
-   } else{("schiappa!!")
-   }
-}
+// const secretNumber = Math.round(Math.random() * 10)
+// while (true) {
+//    const guessedString = prompt("indovina il numero che sto pensando...(da unoa dieci")
+//    const guessedNumber = parseInt(guessedString)
+//    if (guessedNumber===secretNumber) {
+//     alert("bravo, sei un campione!!");
+//     break;
+//    } else{("schiappa!!");
+//    }
+// }
+
+
+// 11 asterischi di seguito
+// let startingString = '';
+
+// while (startingString.length <=10) {      
+//    startingString = startingString + '*';
+// }
+// console.log(startingString);
+
+
+
+// do while   fa almeno una voilta il ciclo anche se non rispetta condition, poi si blocca, a differenza di while che se non è vero non cicla
+// const pippo = 10;
+// const pluto = 20;
+
+// while (pippo > pluto) {
+//    console,console.log('sono entrato nel while');
+   
+// }
+
+// do {
+//    console('sono entrato nel do...while')
+// } while (pippo > pluto);
+
+
+// for (let i = 0; i < 10; i++) {
+//    console.log('sono nel ciclo for e sto facendo il giro' + i)
+   
+// }
+
+// let startingString = ""
+
+// for (;;) {
+   
+//    startingString += '#'
+//    if (startingString.length===10) {
+//       break;
+//    }
+// }
+// console.log(startingString)
+
+
+// piano cartesiano doppio ciclo
+
+// for (let y = 0; y <= 3; y++) {
+//    for (let x = 0; x <= 3; x++) {
+   
+//       console.log( ( `x: ${x} y: ${y}`) )
+      
+//    }
+   
+// }
+
+// for (let y = 0; y <= 3; y++) {
+//     let row = ''
+//    for (let x = 0; x <= 3; x++) {
+//       row += `(x: ${x}, y: ${y})`
+      
+//    }
+//    console.log(row)
+// }
+
+
+//switch
+
+// const ageString = prompt ('in che anno sei nato?')
+
+// switch (ageString) {
+//    case "1978":
+//       alert("sei nato nel mio stesso anno")
+//       break;
+//    case "1990":
+//       alert("sei nato nell'anno dei mondiali in Italia")
+//       break;
+//    case "1984":
+//       alert("sei nato nello stesso anno di Laura")
+//       break;
+
+//    default:
+//       alert("in che anno noioso sei nato")
+//       break;
+// }
+
