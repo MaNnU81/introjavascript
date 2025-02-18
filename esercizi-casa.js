@@ -54,11 +54,32 @@
 // }
 // console.log(finalString);
 
-console.log("7 - chiedi all'utente un numero (positivo) di partenza e poi logga tutti i numeri dal numero dato fino a 0")
+// console.log("7 - chiedi all'utente un numero (positivo) di partenza e poi logga tutti i numeri dal numero dato fino a 0")
 
-const startString = parseInt(prompt("Scrivi un numero positivo"));
+// const startString = parseInt(prompt("Scrivi un numero positivo"));
 
-for (let finalString = startString; finalString >= 0; finalString--) {
-    console.log(finalString);
-} 
+// if (startString >=1) {
+//     for (let finalString = startString; finalString >= 0; finalString--) {
+//         console.log(finalString);
+//     } 
+    
+// } else {
+//     alert("Non è un numero positivo!");
+// }
 
+
+console.log("8 - chiedi all'utente un numero (qualsiasi) di partenza e poi logga tutti i numeri dal numero dato fino a 100")
+
+const startString = parseInt(prompt("Scrivi un numero"));
+
+function countdown(startString) {
+    if (startString === 101) return; //a 101 si blocca
+    console.log(startString);
+    if (startString < 101) {
+        countdown(startString + 1);
+    } else {
+        countdown(startString - 1);
+    } 
+}
+
+countdown(startString); //numero max di loop
