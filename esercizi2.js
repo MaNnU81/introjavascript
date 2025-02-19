@@ -49,5 +49,13 @@
 
 // console.log(isEven(-136));
 
-console.log("terzo esercizio ------")
+console.log("terzo esercizio ---conteggio specifico carattere---")
 
+function countBS() {
+    let contatore = ""
+    
+}
+
+
+
+console.log(countBs( "BOB" ));
