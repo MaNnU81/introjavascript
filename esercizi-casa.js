@@ -1,66 +1,66 @@
 
 // console.log("1-Scalinata in un ciclo");
 
-// let startingString = "";
-// let finalString = "";   //accumula startString fino a fine ciclo
+// let startNumber = "";
+// let finalNumber = "";   //accumula startNumber fino a fine ciclo
 // for (let i = 0; i < 7; i++) {
-//    startingString += "#";
-//    finalString += startingString + "\n" //accumula startString fino a fine ciclo e va a capo
+//    startNumber += "#";
+//    finalNumber += startNumber + "\n" //accumula startNumber fino a fine ciclo e va a capo
 // }
-// console.log(finalString)
+// console.log(finalNumber)
 
 
 
-// // console.log("2-Scalinata in un ciclo capovolta");
+// console.log("2-Scalinata in un ciclo capovolta");
 
-// let startingString = "";
-// let finalString = "";   //accumula startString fino a fine ciclo
+// let startNumber = "";
+// let finalNumber = "";   //accumula startNumber fino a fine ciclo
 // for (let i = 7; i > 0; i--) {
-//    startingString -= "#";
-//    finalString += startingString + "\n" //accumula startString fino a fine ciclo e va a capo
+//    startNumber -= "#";
+//    finalNumber += startNumber + "\n" //accumula startNumber fino a fine ciclo e va a capo
 // }
-// console.log(finalString) 
+// console.log(finalNumber) 
 
 // console.log("4- usando un ciclo logga i numeri da 100 a -100")
 
 
-// let finalString = ""
-// for (let startString = 100; startString >= -100; startString--) {
-//     finalString += startString + "\n"
+// let finalNumber = ""
+// for (let startNumber = 100; startNumber >= -100; startNumber--) {
+//     finalNumber += startNumber + "\n"
 // }
-// console.log(finalString);
+// console.log(finalNumber);
 
 // console.log("5 - usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai multipli di 7"
 // )
-// let finalString = ""
-// for (let startString = 1; startString <= 100; startString++) {
-//     if (startString % 7 === 0) {
-//         finalString += startString + "*" + "\n"
+// let finalNumber = ""
+// for (let startNumber = 1; startNumber <= 100; startNumber++) {
+//     if (startNumber % 7 === 0) {
+//         finalNumber += startNumber + "*" + "\n"
 //     } else {
-//         finalString += startString + "\n"
+//         finalNumber += startNumber + "\n"
 //     }
 // }
-// console.log(finalString);
+// console.log(finalNumber);
 
 // console.log ("6 - usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai quadrati perfetti")
 
-// let finalString = ""
-// for (let startString = 1; startString <= 100; startString++) {
-//     if (Number.isInteger(Math.sqrt(startString))) {
-//         finalString += startString + "*" + "\n"
+// let finalNumber = ""
+// for (let startNumber = 1; startNumber <= 100; startNumber++) {
+//     if (Number.isInteger(Math.sqrt(startNumber))) {
+//         finalNumber += startNumber + "*" + "\n"
 //     } else {
-//         finalString += startString + "\n"
+//         finalNumber += startNumber + "\n"
 //     }
 // }
-// console.log(finalString);
+// console.log(finalNumber);
 
 // console.log("7 - chiedi all'utente un numero (positivo) di partenza e poi logga tutti i numeri dal numero dato fino a 0")
 
-// const startString = parseInt(prompt("Scrivi un numero positivo"));
+// const startNumber = parseInt(prompt("Scrivi un numero positivo"));
 
-// if (startString >=1) {
-//     for (let finalString = startString; finalString >= 0; finalString--) {
-//         console.log(finalString);
+// if (startNumber >=1) {
+//     for (let finalNumber = startNumber; finalNumber >= 0; finalNumber--) {
+//         console.log(finalNumber);
 //     } 
     
 // } else {
@@ -68,18 +68,20 @@
 // }
 
 
-console.log("8 - chiedi all'utente un numero (qualsiasi) di partenza e poi logga tutti i numeri dal numero dato fino a 100")
+// console.log("8 - chiedi all'utente un numero (qualsiasi) di partenza e poi logga tutti i numeri dal numero dato fino a 100")
 
-const startString = parseInt(prompt("Scrivi un numero"));
+// const startNumber = parseInt(prompt("Scrivi un numero"));
 
-function countdown(startString) {
-    if (startString === 101) return; //a 101 si blocca
-    console.log(startString);
-    if (startString < 101) {
-        countdown(startString + 1);
-    } else {
-        countdown(startString - 1);
-    } 
-}
+// function countdown(startNumber) {
+//     if (startNumber === 101) return; //a 101 si blocca
+//     console.log(startNumber);
+//     if (startNumber < 101) {
+//         countdown(startNumber + 1);
+//     } else {
+//         countdown(startNumber - 1);
+//     } 
+// }
 
-countdown(startString); //numero max di loop
+// countdown(startNumber); //numero max di loop
+
+

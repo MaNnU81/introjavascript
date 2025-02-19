@@ -6,9 +6,12 @@
 // }
 
 
-// esercizi per casa 
 
-// 1- creare una piramide come quella del primo esercizio del libro utilizzando un solo consolelog.
+
+// for (let i = 0; i < 7; i++) {
+//     console.log("#".repeat(i));
+// }
+
 
 
 // for (let i = 1; i <= 100; i++) {
@@ -62,21 +65,21 @@
 // }
 
 
-const numUtente = parseInt(prompt("dammi un numero per le x e le y"));
-let row = '';
-if (numUtente > 0 ) {
-    for (let y = 0 ; y < numUtente; y++) {
-        for (let x = 0; x < numUtente; x++) {
-           if ((x+y) % 2 === 0) {
-               row += " ";
-           } else {
-               row += "#";
-           }
-       }
-       row+="\n";
-   } 
-} else alert("Non è un numero positivo!");
-    console.log(row);
+// const numUtente = parseInt(prompt("dammi un numero per le x e le y"));
+// let row = '';
+// if (numUtente > 0 ) {
+//     for (let y = 0 ; y < numUtente; y++) {
+//         for (let x = 0; x < numUtente; x++) {
+//            if ((x+y) % 2 === 0) {
+//                row += " ";
+//            } else {
+//                row += "#";
+//            }
+//        }
+//        row +="\n";
+//    } 
+// } else alert("Non è un numero positivo!");
+//     console.log(row);
 
 
 // const numUtente = parseInt(prompt("dammi un numero per le x e le y"));
