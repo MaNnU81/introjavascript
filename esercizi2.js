@@ -49,13 +49,18 @@
 
 // console.log(isEven(-136));
 
-console.log("terzo esercizio ---conteggio specifico carattere---")
+// console.log("terzo esercizio ---conteggio specifico carattere---")  verificare!!!!!!
 
-function countBS() {
-    let contatore = ""
-    
-}
+// function countBs(string) {
+//     let contatore = 0;
 
-
-
-console.log(countBs( "BOB" ));
+//     for (let i = 0; i < string.lenght; i++) {
+//         if (string[i] === "B"); {
+//             contatore++;
+//             debugger;
+//         }
+       
+//     }
+//     return contatore;
+// }
+// console.log(countBs( "BOB" ));
