@@ -114,7 +114,7 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 //     console.log(arrayP);
 
 
-// ---ESERCIZIO 6--- traformare tutte le stringe in maiuscolo
+// ---ESERCIZIO 6--- traformare tutte le stringhe in maiuscolo
 
 // function stringUppercase(array) {
 //     const newArray = []
@@ -151,20 +151,63 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 
 // ---ESERCIZIO 8--- mettere SOLO le iniziali maiuscole 
 
-function stringFirst(array) {
-    const newArray = []
+// function stringFirst(array) {
+//     const newArray = []
+    
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//          let stringUpperCase = element.charAt(0).toUpperCase();
+//             newArray.push(stringUpperCase)
+//     }
+    
+//     return newArray;
+
+// }
+// const arrayP = stringFirst(array2);
+// console.log(arrayP);
+
+// ---ESERCIZIO 9--- contare tutti i caratteri di tutte le stringhe
+
+// function stringSum(array) {
+//     let newArray = 0;
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+
+//         newArray += array[i].length;
+
+
+
+//     }
+//     return newArray;
+
+// }
+// const arrayP = stringSum(array2);
+// console.log(arrayP);
+
+
+// ---ESERCIZIO 10--- eliminare le vocali dalle stringhe
+
+
+function stringNoVo(array) {
+    let newArray = []
+    
     
     for (let i = 0; i < array.length; i++) {
+        const vowels = "aeiouAEIOU";
         const element = array[i];
-         let stringUpperCase = element.charAt(0).toUpperCase();
-            newArray.push(stringUpperCase)
+            if (element !== Vo){
+                element.pop(newArray)
+
+            }
+        
+           
     }
     
     return newArray;
 
 }
-const arrayP = stringFirst(array2);
+const arrayP = stringNoVo(array2);
 console.log(arrayP);
 
-// ---ESERCIZIO 9--- contare tutti i caratteri di tutte le stringhe
 
