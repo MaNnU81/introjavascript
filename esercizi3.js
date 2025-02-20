@@ -131,7 +131,7 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // const arrayP = stringUppercase(array2);
 // console.log(arrayP);
 
----ESERCIZIO 7--- mettere SOLO le iniziali maiuscole
+// ---ESERCIZIO 7--- mettere SOLO le iniziali maiuscole
 
 function stringFirstUppercase(array) {
     const newArray = []
