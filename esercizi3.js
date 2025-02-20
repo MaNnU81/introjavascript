@@ -133,28 +133,13 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 
 // ---ESERCIZIO 7--- mettere SOLO le iniziali maiuscole
 
-function stringFirstUppercase(array) {
-    const newArray = []
-    
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-            let stringUpperCase = element.charAt(0).toUpperCase() + element.slice (1);
-       
-            newArray.push(stringUpperCase)
-    }
-    
-    return newArray;
-
-}
-const arrayP = stringFirstUppercase(array2);
-console.log(arrayP);
-
-// ---ESERCIZIO 8--- mettere SOLO le iniziali maiuscole 
+// function stringFirstUppercase(array) {
 //     const newArray = []
     
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//          let stringUpperCase = element.charAt(0).toUpperCase();
+//             let stringUpperCase = element.charAt(0).toUpperCase() + element.slice (1);
+       
 //             newArray.push(stringUpperCase)
 //     }
     
@@ -163,4 +148,23 @@ console.log(arrayP);
 // }
 // const arrayP = stringFirstUppercase(array2);
 // console.log(arrayP);
+
+// ---ESERCIZIO 8--- mettere SOLO le iniziali maiuscole 
+
+function stringFirst(array) {
+    const newArray = []
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+         let stringUpperCase = element.charAt(0).toUpperCase();
+            newArray.push(stringUpperCase)
+    }
+    
+    return newArray;
+
+}
+const arrayP = stringFirst(array2);
+console.log(arrayP);
+
+// ---ESERCIZIO 9--- contare tutti i caratteri di tutte le stringhe
 
