@@ -138,8 +138,8 @@ function stringFirstUppercase(array) {
     
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-        //    element.charAt(0) = element
-            let stringUpperCase = element.charAt(0).toUpperCase();
+            let stringUpperCase = element.charAt(0).toUpperCase() + element.slice (1);
+       
             newArray.push(stringUpperCase)
     }
     
@@ -149,4 +149,18 @@ function stringFirstUppercase(array) {
 const arrayP = stringFirstUppercase(array2);
 console.log(arrayP);
 
+// ---ESERCIZIO 8--- mettere SOLO le iniziali maiuscole 
+//     const newArray = []
+    
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//          let stringUpperCase = element.charAt(0).toUpperCase();
+//             newArray.push(stringUpperCase)
+//     }
+    
+//     return newArray;
+
+// }
+// const arrayP = stringFirstUppercase(array2);
+// console.log(arrayP);
 
