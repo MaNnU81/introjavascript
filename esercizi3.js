@@ -138,8 +138,8 @@ function stringFirstUppercase(array) {
     
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-           element.charAt(0) = element.charAt(0).toUpperCase();
-            let stringUpperCase = element
+        //    element.charAt(0) = element
+            let stringUpperCase = element.charAt(0).toUpperCase();
             newArray.push(stringUpperCase)
     }
     
