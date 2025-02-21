@@ -39,7 +39,7 @@ const array1 = [23 , 14, 56, 44, 3, 0, -1, 55, -12, 60, 8]
 
 
 
-// ---ESERCIZIO 3--- fare la media dei vaalori
+// ---ESERCIZIO 3--- fare la media dei valori
 
 // function mediaArray(array) {
 
@@ -121,8 +121,8 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
     
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//             let stringUpperCase = element.toUpperCase()
-//             newArray.push(stringUpperCase)
+//             let stringUpper = element.toUpperCase()
+//             newArray.push(stringUpper)
 //     }
     
 //     return newArray;
@@ -149,7 +149,7 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // const arrayP = stringFirstUppercase(array2);
 // console.log(arrayP);
 
-// ---ESERCIZIO 8--- mettere SOLO le iniziali maiuscole 
+// ---ESERCIZIO 8--- restiture una stringa composta dalle iniziale delle parole
 
 // function stringFirst(array) {
 //     const newArray = []
@@ -165,6 +165,13 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 // }
 // const arrayP = stringFirst(array2);
 // console.log(arrayP);
+
+
+// ///sara version
+// function allInitialsToString(arrayOfString) {
+//     let finalString =
+// }
+
 
 // ---ESERCIZIO 9--- contare tutti i caratteri di tutte le stringhe
 
@@ -188,26 +195,65 @@ const array2 = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua', 'clarabella',
 
 // ---ESERCIZIO 10--- eliminare le vocali dalle stringhe
 
+// function removeVowels(arrayString) {
+//     const vowels = "aeiou";
+//     const newStringWithoutVowels = [];
+//     for (let i = 0; i < arrayString.length; i++) {
+//         let element = arrayString[i];
+//         let elementWithoutVowels = "";
+//         for (let j = 0; j < element.length; j++) {
+//             if (!vowels.includes(element[j].toLowerCase())) {
+//                 elementWithoutVowels += element[j]
+//             }
 
-function stringNoVo(array) {
-    let newArray = []
+
+//         }
+//         newStringWithoutVowels.push(elementWithoutVowels)
+
+//     }
+//     return newStringWithoutVowels;
+// }
+// const newStringWithoutVowels = removeVowels(array2)
+// console.log(newStringWithoutVowels);
+
+
+
+
+// function stringNoVo(array) {
+//     let newArray = []
     
     
-    for (let i = 0; i < array.length; i++) {
-        const vowels = "aeiouAEIOU";
-        const element = array[i];
-            if (element !== Vo){
-                element.pop(newArray)
+//     for (let i = 0; i < array.length; i++) {
+//         const vowels = "aeiouAEIOU";
+//         const element = array[i];
+//             if (element !== vowels){
+//                 element.pop(newArray)
 
-            }
+//             }
         
            
-    }
+//     }
     
-    return newArray;
+//     return newArray;
 
-}
-const arrayP = stringNoVo(array2);
-console.log(arrayP);
+// }
+// const arrayP = stringNoVo(array2);
+// console.log(arrayP);
 
 
+const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]];
+
+
+// ---ESERCIZIO 13--- sommare tutti i numeri in tutti gli array  da finire
+
+// const sumOfNumbers = arrayToReduce => {
+//             let accumulator = 0
+//             for (const singleArray of arrayToReduce) {
+//                 for () {
+//                     const element = array[];
+//                     const element = array[singleArray];
+//                 }
+                
+//             }
+
+// }
