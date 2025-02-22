@@ -74,37 +74,118 @@ const lorenzo = {
   }
 
 
-const arraystudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, eusebio];
+const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, eusebio];
 
 
-console.log(arraystudents);
+// console.log(arraystudents);
 
 
 //2) scrivete una funzione che restituisca l'eta media degli studenti
 
-function meanAge(array) {
-    let media = 0;
 
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+// function averageAge(arrayStudents) {
+//   const today = 2025;
+//   let ageTotal = 0;
+//     for (let i = 0; i < arrayStudents.length; i++) {
+//       const element = arrayStudents[i];
+//       let age = today - element.yob;
+//       ageTotal += age ;       //calcola l'eta degli studenti e ad ogni ciclo li inserisce nel contenitore ageTotal
+      
 
-    
-}
+//   }
+//  const averageTotal = ageTotal / arraystudents.length
+//  return averageTotal   // calcola la media dell'età e restituisce averageTotal
+// }
 
-    return media;
-}
+// const valore = averageAge (arrayStudents);
+// console.log(valore);
 
 
-function getAge(yob, yot) {
-
-
-    return yot - yob
-}
 //3 scrivete una funzione che restituisca im array di stringhe ed ogni stringa dovrà 
 //  mettete gli oggetti dentro un arrayavere questo formato "nome/cognome"
+
+// function nameAndSurname(arrayStudents) {
+//   let nameTotal = [];
+//   for (let i = 0; i < arrayStudents.length; i++) {
+//     const element = arrayStudents[i];
+//       nameTotal.push  (`${element.name} / ${element.surname}`);
+  
+//   } 
+
+//   return nameTotal;
+// }
+// const nameTotal = nameAndSurname (arrayStudents);
+// console.log(nameTotal);
+
+
+
+
+
 //4) scrivete una funzione che restituisca la somma dei maschi e delle femmine
+
+// function genderCount(arrayStudents) {
+//   let male = 0;
+//   let female = 0;
+//   let otherGender = 0;
+
+//   for (let i = 0; i < arrayStudents.length; i++) {
+//     const element = arrayStudents[i];
+//     if (element.gender === "m") {
+//       male++;
+//     }
+//     else if (element.gender === "f") {
+//         female++;
+//       } else {otherGender++;
+//        }
+    
+//   }return {male, female, otherGender}
+// }
+// const genderTotal = genderCount (arrayStudents)
+// console.log(genderTotal);
+
+
 //5) scrivete una funzione che restituisca la media delle medie degli studenti
-//6) scrivete una funzione che restituisca un ogetto cosi strutturato
+
+// function meanOfMeans() {
+
+//   let meansArray = []  //creo un array con tutte le medie degli studenti
+
+//   for (let i = 0; i < arrayStudents.length; i++) {
+//     const element = arrayStudents[i];
+//     let sum = 0;
+//     for (let j = 0; j < element.marks.length; j++) {
+//       sum += element.marks[j];
+
+//     }
+//     let mean = sum / element.marks.length;
+//     meansArray.push(mean);
+
+//   }
+//   // return meansArray
+//   let sumOfaverage = 0;         //laavorando su array apena creato trovo la media delle medie
+
+//   for (let x = 0; x < meansArray.length; x++) {
+//     sumOfaverage += meansArray[x];
+
+
+//   }
+//   let finalAverage = sumOfaverage / meansArray.length;
+//   return finalAverage;
+
+
+
+// }
+
+// // const final = meanOfMeans (arrayStudents);
+// // console.log(final);
+// const finalAverageOfAverage = meanOfMeans(arrayStudents);
+// console.log('la media delle medie è', finalAverageOfAverage);
+
+
+
+
+//6) scrivete una funzione che restituisca un ogetto cosi strutturato //{nationality1{student1Name, student2Name...}, nationality2{student1Name, student2Name...}}
+
 
 
 //7) https://jessbayer.com/
