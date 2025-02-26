@@ -93,7 +93,7 @@ const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, euse
       
 
 //   }
-//  const averageTotal = ageTotal / arraystudents.length
+//  const averageTotal = ageTotal / arrayStudents.length
 //  return averageTotal   // calcola la media dell'età e restituisce averageTotal
 // }
 
@@ -146,40 +146,56 @@ const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, euse
 
 //5) scrivete una funzione che restituisca la media delle medie degli studenti
 
-// function meanOfMeans() {
+function meanOfMeans() {
 
-//   let meansArray = []  //creo un array con tutte le medie degli studenti
+  let meansArray = []  //creo un array con tutte le medie degli studenti
 
-//   for (let i = 0; i < arrayStudents.length; i++) {
-//     const element = arrayStudents[i];
-//     let sum = 0;
-//     for (let j = 0; j < element.marks.length; j++) {
-//       sum += element.marks[j];
+  for (let i = 0; i < arrayStudents.length; i++) {
+    const element = arrayStudents[i];
+    let sum = 0;
+    for (let j = 0; j < element.marks.length; j++) {
+      sum += element.marks[j];
 
-//     }
-//     let mean = sum / element.marks.length;
-//     meansArray.push(mean);
+    }
+    let mean = sum / element.marks.length;
+    meansArray.push(mean);
 
-//   }
-//   // return meansArray
-//   let sumOfaverage = 0;         //laavorando su array apena creato trovo la media delle medie
+  }
+  // return meansArray
+  let sumOfaverage = 0;         //laavorando su array apena creato trovo la media delle medie
 
-//   for (let x = 0; x < meansArray.length; x++) {
-//     sumOfaverage += meansArray[x];
-
-
-//   }
-//   let finalAverage = sumOfaverage / meansArray.length;
-//   return finalAverage;
+  for (let x = 0; x < meansArray.length; x++) {
+    sumOfaverage += meansArray[x];
 
 
+  }
+  let finalAverage = sumOfaverage / meansArray.length;
+  return finalAverage;
 
-// }
 
-// // const final = meanOfMeans (arrayStudents);
-// // console.log(final);
-// const finalAverageOfAverage = meanOfMeans(arrayStudents);
-// console.log('la media delle medie è', finalAverageOfAverage);
+
+}
+
+////// soluzione due
+
+
+function calculateMean(arrayStudents) {
+  const = 0;
+  for (let i = 0; i <arrayStudents.length; i++) {
+    const element = arrayStudents[i];
+    sum = sum + element;
+    
+  }
+  const mean = meanOfMeans(arrayStudents);
+  console.log(mean);
+  
+  
+}
+
+// const final = meanOfMeans (arrayStudents);
+// console.log(final);
+const finalAverageOfAverage = meanOfMeans(arrayStudents);
+console.log('la media delle medie è', finalAverageOfAverage);
 
 
 
@@ -188,4 +204,6 @@ const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, euse
 
 
 
+
 //7) https://jessbayer.com/
+
