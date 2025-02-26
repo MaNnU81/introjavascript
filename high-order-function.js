@@ -113,55 +113,112 @@ const testArray2 = ['pippo', 'pluto', 'paperino', 'clarabella', 'minnie'];
 
 ///FILTER
 
-function keepEven(arrayOfNumbers){
-    const parkingArray = [];
+// function keepEven(arrayOfNumbers){
+//     const parkingArray = [];
 
-    for (let i = 0; i < arrayOfNumbers.length; i++) {
-        const number = arrayOfNumbers[i];
+//     for (let i = 0; i < arrayOfNumbers.length; i++) {
+//         const number = arrayOfNumbers[i];
 
-        if (number % 2 === 0) {
-            parkingArray.push(number)
-        }
+//         if (number % 2 === 0) {
+//             parkingArray.push(number)
+//         }
 
-    }
+//     }
 
-    return parkingArray;
-}
+//     return parkingArray;
+// }
 
-const newArray11 = keepEven(testArray);
-console.log('keep even', newArray11);
+// const newArray11 = keepEven(testArray);
+// console.log('keep even', newArray11);
 
 
-function filter(array, filteringFunction){
+// function filter(array, filteringFunction){
     
-    const parkingArray = [];
+//     const parkingArray = [];
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
 
-        if (filteringFunction(element, i, array)) {
-            parkingArray.push(element)
-        }
+//         if (filteringFunction(element, i, array)) {
+//             parkingArray.push(element)
+//         }
 
-    }
+//     }
 
-    return parkingArray;
+//     return parkingArray;
 
-}
+// }
 
-function isEven(nbr){
-    if(nbr % 2 === 0){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function isEven(nbr){
+//     if(nbr % 2 === 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-// const newArray12 = filter(testArray, isEven);
-const newArray12 = testArray.filter(isEven);
-console.log('new keep even', newArray12);
+// // const newArray12 = filter(testArray, isEven);
+// const newArray12 = testArray.filter(isEven);
+// console.log('new keep even', newArray12);
 
 
-//funzione che tiene dentro testArray tutti i numeri minori di 5
-const newArray13 = testArray.filter(nbr => nbr < 5)
-console.log('keep small', newArray13);
+// //funzione che tiene dentro testArray tutti i numeri minori di 5
+// const newArray13 = testArray.filter(nbr => nbr < 5)
+// console.log('keep small', newArray13);
+
+// //funzione che tiene dentro testArray2 tutti le parole piu lunghe di 6 caratteri.
+// const newArray14 = testArray2.filter(str => str.length > 6)
+// console.log('keep long', newArray14);
+
+// //funzione che rimuove da testArray2 tutte le stringhe con indice pari
+// const newArray15 = testArray2.filter((_, i)  => i % 2 === 1)  // se un paramentro nn si utilizza, per convenzione si sostituisce con undescrore (come str in questo caso) const newArray15 = testArray2.filter((str, i)  => i % 2 === 1)
+// console.log('keep odd index', newArray15);
+
+
+//REDUCE
+
+// function sumAll(arrayOfNumbers) {
+//     let accumulator = 0;
+
+//     for (let i = 0; i < arrayOfNumbers.length; i++) {
+//         const number = arrayOfNumbers[i];
+//         accumulator = accumulator + number;
+//     }
+
+//     return accumulator;
+// }
+
+// const sum = sumAll(testArray);
+// console.log(`sum All`, sum);
+
+
+
+// Function reduce(array, reducingFunction, startingAccumulator){
+
+// let accumulator = startingAccumulator;
+
+//     for (let i = 0; i < array.length; i++) {
+//         const current = array[i];
+//         accumulator = reducingFunction(accumulator, current, i, array);
+//     }
+
+//     return accumulator;
+// }
+// Function sum2Numbers(accumulator, current){
+//     const newAccumulator = newAccomulator + current;
+//     return newAccumulator;
+// }
+
+// // const sum1 = reduce(testArray2, sum2Numbers, 0);
+// const sum1 = testArray.reduce(sum2Numbers, 0);
+// console.log(`new sum all`, sum1);
+
+//concatena le stringhe
+// const sumStrings = testArray2.reduce((a, c) => a + c, "");
+// console.log(`sum all strings`, sumStrings);
+
+
+//moltiplica tra loro tutti i numeri di testArray
+
+// const product = testArray.reduce((a, c) => a * c, 1)
+// console.log(`prodotti`, product);
