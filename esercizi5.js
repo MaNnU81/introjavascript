@@ -159,14 +159,46 @@ const result10_2 = array2.reduce((acc, arrayOfString) => acc + arrayOfString.rep
 console.log(`Risultato 10_2`, result10_2);
 
 //11) restituire un array di numeri che sono le lunghezze delle singole parole (MAP)
-
-
-
-
+function sizeString(arrayOfString){
+size  = arrayOfString.length;
+return size;
+const result11_1 = array2.map(sizeString);
+console.log(`Risultato 11_1`, result11_1);
+}
+//soluz 2
+const result11_2 = array2.map((arrayOfString) => arrayOfString.length)
+console.log(`Risultato 11_2`, result11_2); 
 /////
 const array3 = [[1,2,3], [3,2,1,0], [0,0,0,0,0]];
 
 //12) restituire un array di numeri che sono le lunghezze dei sigoli array (MAP)
+function arrayCount(arrayOfArray){
+    size = arrayOfArray.length;
+    return size
+}
+const result12_1 = array3.map(arrayCount);
+console.log(`Risultato 12_1`, result12_1);
+
+const result12_2 = array3.map((arrayOfArray) => arrayOfArray.length)
+console.log(`Risultato 12_2`, result12_2); 
+
 //13) sommare tutti i numeri in tutti gli array (REDUCE)
+
+function sumOfNumbers(acc, arrayOfArray){
+    sum = arrayOfArray.reduce((countInt, num) => countInt + num, 0);
+    sum = acc + sum;
+    return sum;
+    }
+    const result13_1 = array3.reduce(sumOfNumbers, 0);
+    console.log(`Risultato 13_1`, result13_1); 
+    
+    //soluz 2
+    const result13_2 = array3.reduce((acc, arrayOfArray) => {
+        const sum = arrayOfArray.reduce((countInt, num) => countInt + num, 0);
+        return acc + sum;
+    }, 0);
+    
+    console.log(`Risultato 13_2`, result13_2);
+
 //14) sommare tutte le lunghezze degli array (REDUCE)
 //15) sommare tutti i numeri con indice uguale e restituire un array di risultati (REDUCE)
