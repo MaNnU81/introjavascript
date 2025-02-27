@@ -280,3 +280,4 @@ testArray.sort((f, s) => f - s);
 
 //numeri in ordine decrescente 
 testArray.sort((f, s) => s - f);
+
