@@ -396,4 +396,25 @@ const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, euse
 
 //2)mettere in ordine gli studenti per media dei voti
 
+function averageMarks(marks) {
+    let sum = 0;
 
+    for (let i = 0; i < marks.length; i++) {
+
+
+        sum += marks[i];
+
+    }
+    let avarage = sum / marks.length
+    return avarage;
+}
+
+
+function sortByAverage(student1, student2) {
+    const averageMarks1 = averageMarks(student1.marks);
+    const averageMarks2 = averageMarks(student2.marks);
+    return averageMarks1 - averageMarks2;
+}
+
+arrayStudents.sort(sortByAverage);
+console.log(arrayStudents);
