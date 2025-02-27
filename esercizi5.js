@@ -202,3 +202,60 @@ function sumOfNumbers(acc, arrayOfArray){
 
 //14) sommare tutte le lunghezze degli array (REDUCE)
 //15) sommare tutti i numeri con indice uguale e restituire un array di risultati (REDUCE)
+
+const sumAllEqualindex2 =array3.reduce((a, c) => {
+    for (let j = 0; j < c.length; j++) {
+        const number = c[j];
+        if (a[j]) {
+            a[j] += number;
+        }else {
+            a[j] = number;
+        }
+    }
+return a;
+}, [])
+
+console.log(sumAllEqualindex2);
+
+
+
+///////
+// const sumAllEqualindex2 =array3.reduce((a, c) => {
+//     for (let j = 0; j < c.length; j++) {
+//         const number = c[j];
+//         if (a[j]) {
+//             a[j] += number;
+//         }else {
+//             a[j] = number;
+//         }
+//     }
+// return a;
+// }, [])
+
+// console.log(sumAllEqualindex2);
+
+
+
+
+///////
+
+
+
+
+function sumAllIndex(arrayOfArray) {
+    const parkingArray = [];
+
+    for (let i = 0; i < arrayOfArray.length; i++) {
+        const array = arrayOfArray[i];
+        for (let j = 0; j < array.length; j++) {
+            const number = array[j];
+            if (parkingArray[j]) {
+                parkingArray[j] += number;
+            }else {
+                parkingArray[j] = number;
+            }
+        }
+    }
+    return parkingArray;
+}
+console.log(sumAllIndex(array3))
