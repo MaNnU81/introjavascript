@@ -222,3 +222,61 @@ const testArray2 = ['pippo', 'pluto', 'paperino', 'clarabella', 'minnie'];
 
 // const product = testArray.reduce((a, c) => a * c, 1)
 // console.log(`prodotti`, product);
+
+
+///FIND
+
+function isEven(nbr){
+//     if(nbr % 2 === 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// 
+return nbr % 2 === 0;
+}
+//filter filtra tutti i valori che corrispondono alla ricerca
+console.log(testArray.filter(isEven));
+//find estrae il primo valore che corrisponde alla ricerca data 
+console.log(testArray.find(isEven));
+
+//some (presenza di almeno uno dei valori cercati, booleano)
+console.log(testArray.some(isEven));
+
+//every (tutti i valori corrispondono al valore cercato, booleano)
+console.log(testArray.every(isEven));
+
+//SORT
+
+function sortingFunctionFromBiggerToSmaller(first, second){
+if (first < second) {
+    return 1;
+}else if (first > second) {
+    return -1;
+} else {
+    return 0;
+}
+
+}
+
+function sortingFunctionFromSmallerToBigger(first, second){
+    if (first > second) {
+        return 1;
+    }else if (first < second) {
+        return -1;
+    } else {
+        return 0;
+    }
+    
+    }
+
+
+testArray.sort()  //serve a poco coi numeri, mette in ordine come fosse sctringhe comparando indici
+console.log(testArray);
+testArray.sort(sortingFunctionFromBiggerToSmaller) 
+testArray.sort(sortingFunctionFromSmallerToBigger) 
+//numeri in ordine crescente
+testArray.sort((f, s) => f - s);
+
+//numeri in ordine decrescente 
+testArray.sort((f, s) => s - f);
