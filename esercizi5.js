@@ -398,12 +398,8 @@ const arrayStudents = [lorenzo, jeremias, giovanni, Jan, laura, sara, hugo, euse
 
 function averageMarks(marks) {
     let sum = 0;
-
     for (let i = 0; i < marks.length; i++) {
-
-
         sum += marks[i];
-
     }
     let avarage = sum / marks.length
     return avarage;
