@@ -91,7 +91,7 @@ media : ${this.calculateMean()}`
 
 class Teacher extends Human {
     constructor(name, surname, yob, nationality, gender, subject, students = []) {
-        super(name, surname, yob, nationality, gender)
+        super(name, surname, yob, nationality, gender);
         this.subject = subject;
         this.students = students;
     }
@@ -136,6 +136,13 @@ numero di studenti : ${this.students.length}`
 }
 }
 
+class Principal extends Human {
+    constructor(name, surname, yob, nationality, gender, teachers = [], school) {
+    super(name, surname, yob, nationality, gender);
+    this.teachers = teachers;
+    this.school = school;
+}
+}
 const student1 = new Student(`laura`, `mazza`, `1984`, `it`, `f`, [7, 8, 9]);
 const student2 = new Student(`eusebio`, `veizi`, `1993`, `al`, `m`, [6, 6.5]);
 const student3 = new Student(`lorenzo`, `puppo`, `1993`, `it`, `m`, [5, 8, 8]);
