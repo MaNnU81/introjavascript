@@ -107,18 +107,18 @@ numero di studenti : ${this.students.length}`
     
     bestStudent(){
         let bestMean = 0 ;
-        let bestStudent = "";
+        let bestStudent = null;
 
         for (let i = 0; i < this.students.length; i++) {
             const student = this.students[i];
             const mean = student.calculateMean();
             if (mean > bestMean) {
                 bestMean = mean;
-                bestStudent = student.name + " " + student.surname;
+                bestStudent = student;
             }
             
         }
-        return `${bestStudent} : ${bestMean}`;
+        return bestStudent;
     }
 
     StudentsMean(){
@@ -137,23 +137,84 @@ numero di studenti : ${this.students.length}`
 }
 
 class Principal extends Human {
-    constructor(name, surname, yob, nationality, gender, teachers = [], school) {
+    constructor(name, surname, yob, nationality, gender,school, teachers = []) {
     super(name, surname, yob, nationality, gender);
     this.teachers = teachers;
     this.school = school;
 }
+
+bestOfTheBest() {
+    let bestStudent = null;
+    let highestMean = 0;
+
+    for (let i = 0; i < this.teachers.length; i++) {
+        const teacher = this.teachers[i];
+        const bestOfTeacher = teacher.bestStudent(); 
+
+        if (bestOfTeacher && bestOfTeacher.calculateMean() > highestMean) {
+            highestMean = bestOfTeacher.calculateMean();
+            bestStudent = bestOfTeacher;
+        }
+    }
+
+    return bestStudent ? `${bestStudent.name} ${bestStudent.surname} con media ${highestMean}` : "Nessun vincitore";
+
+
+
 }
+
+bestTeacher() {
+    let bestMean = 0;
+    let bestTeacher = null;
+
+    for (let i = 0; i < this.teachers.length; i++) {
+        const teacher = this.teachers[i];
+        const bestStudent = teacher.bestStudent();
+        const mean = bestStudent ? bestStudent.calculateMean() : 0;
+
+        if (mean > bestMean) {
+            bestMean = mean;
+            bestTeacher = teacher;
+        }
+    }
+    return bestTeacher ? `${bestTeacher.name} ${bestTeacher.surname} con media ${bestMean}` : "Nessun insegnante trovato";
+}
+
+
+} 
 const student1 = new Student(`laura`, `mazza`, `1984`, `it`, `f`, [7, 8, 9]);
 const student2 = new Student(`eusebio`, `veizi`, `1993`, `al`, `m`, [6, 6.5]);
 const student3 = new Student(`lorenzo`, `puppo`, `1993`, `it`, `m`, [5, 8, 8]);
 const students = [student1, student2, student3];
 
+const student4 = new Student(`hugo`, `martinez`, `1994`, `sv`, `m`, [9, 8, 9]);
+const student5 = new Student(`jeremias`, `cedeno`, `2003`, `ec`, `m`, [9, 6, 7]);
+const student6 = new Student(`sara`, `de prà`, `1989`, `it`, `f`, [5, 8, 8]);
+const students1 = [student4, student5, student6];
 
-const teacher1 = new Teacher(`andrea`, `asioli`, `1978`, `it`, `m`, `CS`, students)
+const student7 = new Student(`giovanni`, `sussarellu`, `1981`, `it`, `m`, [7, 7, 7]);
+const student8 = new Student(`jan`, `stigliani`, `2000`, `it`, `m`, [10, 7, 7]);
+const students2 = [student7, student8, student1];
+const totalStudents = [students, students1, students2];
 
-console.log(student1.toString());
-console.log(teacher1.bestStudent());
-console.log(teacher1.StudentsMean());
+
+
+const teacher1 = new Teacher(`andrea`, `asioli`, `1978`, `it`, `m`, `CS`, students);
+const teacher2 = new Teacher(`edna`, `caprapall`, `1972`, `USA`, `f`, `Lettere`, students1);
+const teacher3 = new Teacher(`elizabeth`, `hoover`, `1975`, `USA`, `f`, `Storia`, students2);
+const teachers = [teacher1, teacher2, teacher3];
+
+const principal1 = new Principal(`seymor`, `skinner`, `1969`, `USA`, `M`, `springfield`, teachers)
+
+// console.log(student1.toString());
+// console.log(teacher1.bestStudent());
+// console.log(teacher1.StudentsMean());
+console.log(principal1.bestOfTheBest());
+console.log(principal1.bestTeacher());
+
+
+
+
 
 
 //1)aggiungere al toString di tutte le classi gender e nationality
