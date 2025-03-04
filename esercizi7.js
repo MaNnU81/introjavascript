@@ -36,7 +36,7 @@
 //         Visualizzare l'elenco dei libri disponibili e degli utenti registrati.
 
 class Book {
-    
+
     constructor(title, author, isbn) {
         this.title = title;
         this.author = author;
@@ -50,7 +50,7 @@ class Book {
     //     this.isbn = value;
     // }
 
-    toString(){
+    toString() {
         const bookStr = `
         titolo : ${this.title}
         autore : ${this.author}`;
@@ -65,7 +65,7 @@ class PhysicalBook extends Book {
         super(title, author, isbn);
         this.shelfLocation = shelfLocation;
     }
-    toString(){
+    toString() {
         const bookphyStr = `
         Physical Version
          ${super.toString()}
@@ -81,7 +81,7 @@ class EBook extends Book {
         super(title, author, isbn);
         this.fileFormat = fileFormat;
     }
-    toString(){
+    toString() {
         const eBookStr = `
         EBook version 
          ${super.toString()}
@@ -95,7 +95,7 @@ class EBook extends Book {
 
 class User {
     static maxBorrowLimit = 3;
-    
+
     constructor(name, surname, id, borrowedBooks = []) {
         this.name = name;
         this.surname = surname
@@ -103,7 +103,12 @@ class User {
         this.borrowedBooks = borrowedBooks;
     }
 
-    borrowBook(book){
+get borrowedBooksNumber(){   ////non so se giusto
+    return this.borrowedBooks.length
+}
+
+
+    borrowBook(book) {
         if (this.borrowedBooks.length < User.maxBorrowLimit) {
             this.borrowedBooks.push(book);
             console.log(`${this.name} ha preso in prestito "${book}".`);
@@ -111,34 +116,34 @@ class User {
             console.log(`${this.name} ha raggiunto il limite massimo di prestiti.`);
         }
     }
-    returnBook(book){
-        if(this.borrowedBooks.length > 0){
+    returnBook(book) {
+        if (this.borrowedBooks.length > 0) {
             console.error('che cazzo vuoi, non hai libri da restituire, mi fai perdere tempo')
-            return 
+            return
         }
-        if(this.borrowedBooks.includes(book) ){
-        this.borrowedBooks.splice(book);
-        console.log(`hai restituito il libro finalmente ${book.title}`);
-    } else {
-        console.error('che cazzo vuoi, mi fai perdere tempo, sto libro non e nostro')
-    }
+        if (this.borrowedBooks.includes(book)) {
+            this.borrowedBooks.splice(book);
+            console.log(`hai restituito il libro finalmente ${book.title}`);
+        } else {
+            console.error('che cazzo vuoi, mi fai perdere tempo, sto libro non e nostro')
+        }
     }
 }
 
 class PremiumUser extends User {
-    constructor(name, surname, id, newLimit,  borrowedBooks = []) {
-    super(name, surname, id, borrowedBooks = []);  
-    this.newLimit = User.maxBorrowLimit; // Di base ha il limite standard      
+    constructor(name, surname, id, newLimit, borrowedBooks = []) {
+        super(name, surname, id, borrowedBooks = []);
+        this.newLimit = User.maxBorrowLimit; // Di base ha il limite standard      
     }
 
-    extendBorrowLimit(newLimit){
+    extendBorrowLimit(newLimit) {
         if (newLimit > User.maxBorrowLimit) {
             this.newLimit = newLimit;
             console.log(`${this.name} ora può prendere fino a ${this.newLimit} libri in prestito.`);
         } else {
             console.log(`Il nuovo limite deve essere maggiore di ${User.maxBorrowLimit}.`);
         }
-        
+
 
     }
 
@@ -152,6 +157,17 @@ class PremiumUser extends User {
     }
 }
 
+class Library {
+    constructor(books = [], users = []) {
+        this.books = books;
+        this.users = users;
+    }
+    addBook(book) {
+        this.books.push(book);
+        console.log(`Il libro "${book.title}" è stato aggiunto alla biblioteca.`);
+    }
+
+}
 
 
 
