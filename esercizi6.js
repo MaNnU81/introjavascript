@@ -204,7 +204,7 @@ const teacher2 = new Teacher(`edna`, `caprapall`, `1972`, `USA`, `f`, `Lettere`,
 const teacher3 = new Teacher(`elizabeth`, `hoover`, `1975`, `USA`, `f`, `Storia`, students2);
 const teachers = [teacher1, teacher2, teacher3];
 
-const principal1 = new Principal(`seymor`, `skinner`, `1969`, `USA`, `M`, `springfield`, teachers)
+const principal1 = new Principal(`seymor`, `skinner`, `1969`, `USA`, `m`, `springfield`, teachers)
 
 // console.log(student1.toString());
 // console.log(teacher1.bestStudent());
@@ -347,10 +347,10 @@ const ContoRisparmio3 = new ContoRisparmio(`jan`, `stigliani`, `2000`, `it`, `m`
 const ContoRisparmio4 = new ContoRisparmio(`edna`, `caprapall`, `1972`, `USA`, `f`, `5843`, `2000`);
 const ContoRisparmio5 = new ContoRisparmio(`elizabeth`, `hoover`, `1975`, `USA`, `f`, `750`, `2000`);
 
-console.log(correntista10.toString());
-console.log('Il nuovo saldo è di ' + correntista10.preleva(5000));
-console.log('Il nuovo saldo è di ' + correntista10.versamento(5000));
-console.log(ContoCorrente2.toString());
-console.log('Il nuovo saldo è di ' + ContoCorrente5.paga(5000));
-console.log('Abbiamo aggiunto il tuo BonusSaldo ' + ContoRisparmio2.applicaBonus());
+// console.log(correntista10.toString());
+// console.log('Il nuovo saldo è di ' + correntista10.preleva(5000));
+// console.log('Il nuovo saldo è di ' + correntista10.versamento(5000));
+// console.log(ContoCorrente2.toString());
+// console.log('Il nuovo saldo è di ' + ContoCorrente5.paga(5000));
+// console.log('Abbiamo aggiunto il tuo BonusSaldo ' + ContoRisparmio2.applicaBonus());
 
